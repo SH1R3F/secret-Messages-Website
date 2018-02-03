@@ -36,7 +36,7 @@ $(document).ready(function(){
       /*-----------* VALIDATE INPUT *-----------*/
       if(value === ''){
         $(".errName")[0].innerHTML = "Please Enter your name";
-      }else if( !/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\u0600-\u06FF]+$/.test( value.toLowerCase() ) ){
+      }else if( !/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю]+$/.test( value.toLowerCase() ) ){
         $(".errName")[0].innerHTML = "Your name must contain only letters and numbers";
       }else if( value.length < 4 ){
         $(".errName")[0].innerHTML = "The Name Must Be At Least 4 Characters";
@@ -92,7 +92,7 @@ $(document).ready(function(){
       /*-----------* VALIDATE INPUT *-----------*/
       if(value === ''){
         $(".errPass")[0].innerHTML = "You Must Enter a Password";
-      }else if( !/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\.\-~@\u0600-\u06FF]+$/i.test( value ) ){
+      }else if( !/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\.\-~@]+$/i.test( value ) ){
         $(".errPass")[0].innerHTML = "Password must be in letters, numbers, dashes, underscores and spaces";
       }else if( value.length < 8 ){
         $(".errPass")[0].innerHTML = "Password Must Be At Least 8 digits";
