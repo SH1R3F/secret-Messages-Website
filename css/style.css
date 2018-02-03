@@ -1,0 +1,410 @@
+*{
+  font-family: 'Abel', 'Cairo', sans-serif;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  position: relative;
+  min-height: 100%;
+  background: #EEE;
+}
+nav.navbar{
+  background-color: #00ADB5;
+}
+nav.navbar a, nav.navbar a:hover, nav.navbar a:visited{
+  color: #FFF !important;
+  background: none;
+}
+nav.navbar li:hover{
+  background-color: #0aa0a7;
+}
+nav.navbar li:hover a{
+  color: #f1f1f1 !important;
+}
+@media (max-width: 767px){
+  nav.navbar ul.navbar-nav{
+    float: none !important;
+  }
+}
+.navbar-default .navbar-toggle{
+  border-color: #FFF;
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: #FFF;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus{
+  background-color: #2dc5be;
+}
+a.navbar-brand{
+  background: url('https://sarahah.com/img/Logo.png') left no-repeat !important;
+  padding-left: 45px;
+  font-weight: bold;
+}
+/*~~~~~~~~~~~~~* Start Home Page Content *~~~~~~~~~~~~~*/
+section.Home p.describe{
+  color: #444;
+}
+section.Home h3{
+  font-size: 26px;
+  font-weight: bold;
+}
+section.Home ul{
+  padding-left: 0 !important;
+}
+section.Home ul>li{
+  margin-left: 30px;
+}
+section.Home .links{
+  margin-top: 30px;
+}
+section.Home .links>a{
+  color: #10bbb3;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/*~~~~~~~~~~~~~* Start Footer styling *~~~~~~~~~~~~~*/
+footer.Home{
+  background: #e3e6e7;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 80px;
+}
+footer.Home {font-size: 12px;}
+footer.Home .imp-lin>span:first-of-type{
+  color: #4c4c4c;
+}
+footer.Home .imp-lin .social-links a>i{
+  color: #00adb5;
+  margin: 0 3px;
+}
+footer.Home .imp-lin .social-links a>i:hover{
+  color: #0aa0a7;
+}
+footer.Home .imp-lin .pages a{
+  color: #00adb5;
+  margin: 0 3px;
+}
+footer.Home .auth a{
+  color: #00adb5;
+}
+
+/*~~~~~~~~~~~~~* Start Login Page *~~~~~~~~~~~~~*/
+.login-page .login-form{
+  background: #FFF;
+  padding: 25px 60px;
+  border: 1px solid #e6f8f7;
+  border-radius: 8px;
+}
+.login-page .login-form .checkbox>label{
+  margin-right: 20px;
+}
+.login-page .login-form .checkbox>button{
+  padding: 7px 30px;
+  color: #00ADB5;
+  border-color: #00ADB5;
+}
+.login-page .login-form .checkbox>button:hover{
+  background-color: #00ADB5;
+  color: #FFF;
+}
+.forgot-password{
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  transition: all .1s;
+}
+.forgot-password:hover{
+  color: #10bbb3;
+  text-decoration: none;
+}
+
+/*~~~~~~~~~~~~~* Start Register Page *~~~~~~~~~~~~~*/
+.register-page .register-form{
+  background: #FFF;
+  padding: 25px;
+  border: 1px solid #e6f8f7;
+  border-radius: 8px;
+}
+.register-page .register-form label{
+  text-align: center;
+}
+.register-page .register-form .submit-btn>button{
+  padding: 7px 30px;
+  color: #10bbb3;
+  border-color: #00ADB5;
+  margin-top: 25px;
+}
+.register-page .register-form .submit-btn>button:hover{
+  background-color: #00ADB5;
+  color: #FFF;
+}
+
+
+/*~~~~~~~~~~~~~* Start About Me Page *~~~~~~~~~~~~~*/
+.bold{
+  font-weight: bold;
+  margin-top: 25px;
+}
+.about-page h4.bold{
+  margin-top: 17px;
+}
+.about-page p{
+  font-size: 18px;
+}
+.about-page h5{
+  font-size: 16px;
+}
+
+
+/*~~~~~~~~~~~~~* User Page Styling *~~~~~~~~~~~~~*/
+.my-details{
+  background-color: #FFF;
+  padding: 25px 0;
+  text-align: center;
+  border-radius: 10px;
+}
+.my-details .my-img{
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border-radius: 50%;
+  background: url('https://sarahahstorage.blob.core.windows.net/files/81e25b5f-0894-4a43-b822-63b392ecc117.jpg') top center no-repeat;
+  background-size: auto 100%;
+}
+.my-details h4:first-of-type{
+  margin-top: 15px;
+}
+.my-details i{
+  color: #00adb5;
+}
+.my-details>a{
+  color: #00adb5;
+}
+
+.my-messages{
+  background: #FFF;
+  border-radius: 10px;
+  padding: 25px 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.my-messages>h2:first-of-type{
+  margin-top: 0;
+}
+.my-messages .category{
+  padding: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #00adb5;
+}
+.my-messages .category:hover{
+  background-color: #f5f8fa;
+}
+.my-messages .category.active{
+  background-color: #00adb5;
+  color: #FFF;
+}
+.my-messages .messages{
+  margin-top: 10px;
+}
+.my-messages .messages .message{
+  position: relative;
+  padding: 20px 5px;
+  border-bottom: 1px solid #DDD;
+  margin-top: 10px;
+}
+.my-messages .messages .message>p{
+  text-align: left;
+  padding: 20px 0;
+}
+.my-messages .messages .message>.delete{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #10bbb3;
+}
+.my-messages .messages .message>.info{
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+.my-messages .messages .message>.info a{
+  color: #888;
+  text-decoration: none;
+}
+.my-messages .messages .message>.info a:last-of-type:hover{
+  color: #10bbb3;
+}
+.my-messages .messages .message>.love{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  color: #10bbb3;
+  border: 1px solid #10bbb3;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+.my-messages .messages .message.loved .love{
+  color: #f38989;
+  background: #10bbb3;
+}
+
+/*~~~~~~~~~~~~~* SETTINGS PAGE Styling *~~~~~~~~~~~~~*/
+.settings .categories,
+.settings .setting{
+  background: #FFF;
+  border-radius: 2px;
+  border: 1px solid #DDD;
+  margin-bottom: 25px;
+}
+.settings .categories ul,
+.settings .categories h4{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.settings .categories h4{
+  padding: 10px 0 10px 10px;
+}
+.settings .categories ul>li{
+  padding: 10px 0 5px 20px;
+  border-top: 1px solid #DDD;
+}
+.settings .categories ul>li a{
+  color: #00adb5;
+  text-decoration: none;
+}
+.settings .categories ul>li a>i{
+  margin-right: 5px;
+  color: #00adb5;
+}
+.settings .categories ul>li.active{
+  font-weight: bold;
+  background: #f4f4f4;
+}
+.settings .setting{
+  padding: 0 15px 25px;
+}
+.settings .setting label{
+  text-align: right;
+}
+.settings .setting .submit-btn{
+  padding: 7px 17px;
+  border-color: #00adb5;
+  color: #00adb5;
+  margin-top: 15px;
+}
+.settings .setting .submit-btn.danger{
+  color: #aa4a24;
+  border-color: #aa4a24;
+}
+.settings .setting .submit-btn.danger:hover{
+  background-color: #aa4a24;
+  color: #FFF;
+}
+.settings .setting .submit-btn:hover{
+  background: #00adb5;
+  color: #FFF;
+}
+/*~~~~~~~~~~~~~~~~~~~* SENDING MESSAGE - PAGE STYLING *~~~~~~~~~~~~~~~~~~~*/
+.sending-box{
+  background: #FFF;
+  margin-top: 70px;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  padding: 0 30px 70px;
+}
+.sending-box .profile-img{
+  height: 100px;
+  width: 100px;
+  margin: -50px auto 0;
+  border-radius: 50%;
+  background: url('https://sarahahstorage.blob.core.windows.net/files/81e25b5f-0894-4a43-b822-63b392ecc117.jpg') top center no-repeat;
+  background-size: auto 100%;
+}
+.sending-box h4.bold{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.sending-box p{
+  font-size: 17px;
+}
+.sending-box textarea{
+  width: 80%;
+  height: 190px;
+  resize: none;
+  border-color: #CCC;
+  border-radius: 7px;
+  outline: none;
+  padding: 10px;
+}
+.sending-box textarea:focus{
+  border-color: #00adb5;
+}
+.sending-box button{
+  display: block;
+  margin: 20px auto 0;
+  padding: 7px 17px;
+  border-color: #00adb5;
+  color: #00adb5;
+  margin-top: 15px;
+}
+.sending-box button>i{
+  margin-right: 5px;;
+}
+.sending-box button:hover{
+  background: #00adb5;
+  color: #FFF;
+}
+
+/*~~~~~~~~~~~~~* Verifying PAGE Styling *~~~~~~~~~~~~~*/
+.verifing .verify-box{
+  background: #FFF;
+  margin-top: 70px;
+  border: 1px solid #CCC;
+  border-radius: 7px;
+  text-align: center;
+  padding: 0px 20px 60px;
+}
+.verifing .verify-box button.btn-success{
+  font-size: 20px;
+}
+
+/*~~~~~~~~~~~~~* Pagination Styling *~~~~~~~~~~~~~*/
+.pagination a{
+  margin: 0 3px;
+  border: 1px solid #9e9e9e;
+  padding: 2px 7px;
+  text-decoration: none;
+  color: #888;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.pagination a.active,
+.pagination a:hover{
+  color: #89B399;
+  border-color: #89B399;
+  font-weight: bold;
+  border-width: 2px;
+}
