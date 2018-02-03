@@ -1,7 +1,23 @@
 <?php
 require_once 'core/init.php';
-
-
+//CHECK IF NO USERS TABLE EXISTS AND CREATE IT
+if(!DB::getInstance()->isTable('users')){
+  DB::getInstance()->CreateTable('users', array(
+    'id'            => 'int NOT NULL PRIMARY KEY AUTO_INCREMENT',
+    'name'          => 'varchar(255) NOT NULL',
+    'email'         => 'varchar(255) NOT NULL',
+    'password'      => 'varchar(255) NOT NULL',
+    'salt'          => 'varchar(255) NOT NULL',
+    'username'      => 'varchar(255) NOT NULL',
+    'gender'        => 'int(1) NOT NULL',
+    'country'       => 'varchar(255) NOT NULL',
+    'photo'         => 'LONGBLOB',
+    'notifications' => 'int(1) NOT NULL',
+    'joinDate'      => 'datetime',
+    'email_verify'  => 'int(1) NOT NULL',
+    'email_hash'    => 'varchar(255) NOT NULL',
+  ));
+}
 if(Input::exists() && Input::get('register_csrf')){
   if(Token::check('register_csrf', Input::get('register_csrf'))){//
 
@@ -12,7 +28,7 @@ if(Input::exists() && Input::get('register_csrf')){
         'required' => true,
         'min' => '4',
         'max' => '50',
-        'regexp' => '/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\u0600-\u06FF]+$/'
+        'regexp' => '/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю]+$/'
       ),
       'email' => array(
         'required' => true,
@@ -25,7 +41,7 @@ if(Input::exists() && Input::get('register_csrf')){
         'required' => true,
         'min' => '8',
         'max' => '80',
-        'regexp' => '/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\.\-~@\u0600-\u06FF]+$/i'
+        'regexp' => '/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\.\-~@]+$/i'
       ),
       'username' => array(
         'required' => true,
@@ -54,6 +70,7 @@ if(Input::exists() && Input::get('register_csrf')){
         $SQLimage = "";
       }
       $salt = Hash::salt(32);
+
       if($user->InsertNew('users', array(
           'name'          => Input::get('name'),
           'email'         => Input::get('email'),
