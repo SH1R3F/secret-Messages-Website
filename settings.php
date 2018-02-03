@@ -15,7 +15,7 @@ if(Input::exists()){
              'required' => true,
              'min'      => '4',
              'max'      => '50',
-             'regexp'   => '/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю\u0600-\u06FF]+$/'
+             'regexp'   => '/^[\w абвгдеёжзийклмнопрстуфхцчшщъыьэю]+$/'
            ),
            'username' => array(
              'required' => true,
